@@ -17,14 +17,7 @@ public class AutoCompleteTextViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_complete_text_view);
 
-        String[] locales = Locale.getISOCountries();
-        ArrayList<String> countriesNames = new ArrayList<String>();
-
-        for (String countryCode : locales) {
-            Locale object = new Locale("", countryCode);
-            countriesNames.add(object.getDisplayCountry());
-        }
-
+        ArrayList<String> countriesNames = generateListWithCountryNames();
         ArrayAdapter<String> myCustomAdapter = new ArrayAdapter<String>(this, R.layout.text_custom_view, countriesNames);
 
         final AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.auto_complete_text_view);
@@ -51,5 +44,22 @@ public class AutoCompleteTextViewActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * We generate ArrayList with all countries
+     *
+     * @return
+     */
+    private ArrayList<String> generateListWithCountryNames() {
+        String[] locales = Locale.getISOCountries();
+        ArrayList<String> countriesNames = new ArrayList<String>();
+
+        for (String countryCode : locales) {
+            Locale object = new Locale("", countryCode);
+            countriesNames.add(object.getDisplayCountry());
+        }
+
+        return countriesNames;
     }
 }
