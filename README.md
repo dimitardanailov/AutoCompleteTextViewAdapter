@@ -27,4 +27,4 @@ textView.setAdapter(myCustomAdapter);
 
 ![AutoCompleteTextViewAdapter][1]
 
-  [1]: http://i.stack.imgur.com/gnbiQ.png
+  [1]: http://i.stack.imgur.com/nV1dI.png
