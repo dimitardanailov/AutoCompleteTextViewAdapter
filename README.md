@@ -1,8 +1,6 @@
 # AutoCompleteTextViewAdapter
 
-I create a example project: [AutoCompleteTextViewAdapter(Github Repo)](https://github.com/dimitardanailov/AutoCompleteTextViewAdapter)
-
-You need to implement follow line of source code:
+Current solution give answer how we can style our Autocomplete popup window
 
 **Activity**
 
