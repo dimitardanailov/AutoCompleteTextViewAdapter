@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="dc_primary" type="color">#FF34133B</item>
+    <item name="dc_separator_start" type="color">#FFED7E23</item>
+    <item name="dc_separator_center" type="color">#FFED7C20</item>
+    <item name="dc_separator_border" type="color">#FFEB7311</item>
+    <color name="white">#ffffff</color>
+    <color name="dark_grey">#ff333333</color>
+    <color name="mid_grey">#ff323030</color>
+    <color name="light_grey">#ffDADADA</color>
+    <color name="black">#FF000000</color>
+    <color name="dc_secondary">#FFED7C20</color>
+
+</resources>

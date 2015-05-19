@@ -3,5 +3,10 @@
     <string name="title_activity_auto_complete_text_view">AutoCompleteTextViewActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="hint">Please type a country ...</string>
+
+    <string name="change_layout">Change Layout</string>
+    <string name="change_text_color">Change Text Color</string>
+
     <string name="action_settings">Settings</string>
 </resources>

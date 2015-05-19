@@ -1,10 +1,14 @@
 package app.demo.adapter.autocompletetextview.autocompletetextviewadapter;
 
+import android.widget.ArrayAdapter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AutoCompleteTextView;
 
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class AutoCompleteTextViewActivity extends Activity {
 
@@ -12,6 +16,19 @@ public class AutoCompleteTextViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_complete_text_view);
+
+        String[] locales = Locale.getISOCountries();
+        ArrayList<String> countriesNames = new ArrayList<String>();
+
+        for (String countryCode : locales) {
+            Locale object = new Locale("", countryCode);
+            countriesNames.add(object.getDisplayCountry());
+        }
+
+        ArrayAdapter<String> myCustomAdapter = new ArrayAdapter<String>(this, R.layout.text_custom_view, countriesNames);
+
+        final AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.auto_complete_text_view);
+        textView.setAdapter(myCustomAdapter);
     }
 
     @Override
